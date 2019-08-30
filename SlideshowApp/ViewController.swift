@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     
     //写真の配列
-    let images = [UIImage(named: "photo01"), UIImage(named: "photo02"), UIImage(named: "photo03")]
+    let images = [UIImage(named: "01.jpg"), UIImage(named: "02.jpg"), UIImage(named: "03.jpg")]
     
     
     override func viewDidLoad() {
@@ -31,9 +31,9 @@ class ViewController: UIViewController {
         let imageView = images[0]
         UIImageView.image = imageView
         
-        // 遷移先ViewCntrollerの取得
-        // ↓ここがエラーになる。よくわからない
-        // let nextView = segue.destination as! ResultViewController
+        // 遷移先ViewCntrollerの取得を書くっぽい
+        //
+        //
         
     }
     
