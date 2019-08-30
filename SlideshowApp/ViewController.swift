@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     
     var imageIndex = 0
     
+    //一定の間隔で処理を行うためのタイマー
     var timer: Timer!
+    
+
     
     //写真の配列
     let images = [UIImage(named: "photo01"), UIImage(named: "photo02"), UIImage(named: "photo03")]
@@ -27,6 +30,11 @@ class ViewController: UIViewController {
         
         let imageView = images[0]
         UIImageView.image = imageView
+        
+        // 遷移先ViewCntrollerの取得
+        // ↓ここがエラーになる。よくわからない
+        // let nextView = segue.destination as! ResultViewController
+        
     }
     
     

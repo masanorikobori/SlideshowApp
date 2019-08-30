@@ -9,9 +9,20 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    //拡大画像を表示する
+    @IBOutlet weak var bigImageView: UIImageView!
+    
+    //受け取るためのプロパティ
+    var image: UIImage!
+    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //イメージビュー
+        bigImageView.image = self.image
 
         // Do any additional setup after loading the view.
     }
