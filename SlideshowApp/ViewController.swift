@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     //一定の間隔で処理を行うためのタイマー
     var timer: Timer!
     
+    // タイマー用の時間のための変数
+    var timer_sec: Float = 0
+    
 
     
     //写真の配列
@@ -51,7 +54,12 @@ class ViewController: UIViewController {
     //再生と停止ボタン
     @IBAction func startStop(_ sender: Any) {
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
+        if self.timer != nil {
+            self.timer.invalidate()   // タイマーを停止する
+            self.timer = nil          // startTimer() の timer == nil で判断するために、 timer = nil としておく
+        }
     }
+
     
     //進むボタン
     @IBAction func nextImage(_ sender: Any) {
@@ -72,6 +80,7 @@ class ViewController: UIViewController {
         }
         UIImageView.image = images[imageIndex]
     }
+    
 
 
 
