@@ -8,25 +8,24 @@
 
 import UIKit
 
+//　プロパティ、イニシャライザ、メソッドの順で書くっぽい！
+
+
+// クラス。一番上の階層
 class ViewController: UIViewController {
     
     //UIimageViewをアウトレットした！
     @IBOutlet weak var UIImageView: UIImageView!
     
+    
+    // プロパティ
     var imageIndex = 0
-    
-    //一定の間隔で処理を行うためのタイマー
-    var timer: Timer!
-    
-    // タイマー用の時間のための変数
-    var timer_sec: Float = 0
-    
-
-    
-    //写真の配列
-    let images = [UIImage(named: "01.jpg"), UIImage(named: "02.jpg"), UIImage(named: "03.jpg")]
+    var timer: Timer!   //一定の間隔で処理を行うためのタイマー
+    var timer_sec: Float = 0    // タイマー用の時間のための変数
+    let images = [UIImage(named: "01.jpg"), UIImage(named: "02.jpg"), UIImage(named: "03.jpg")]     //写真の配列
     
     
+    // これはメソッドになるの？？
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,6 +39,7 @@ class ViewController: UIViewController {
         
     }
     
+
     
     //戻るボタン
     @IBAction func backImage(_ sender: Any) {
@@ -51,14 +51,20 @@ class ViewController: UIViewController {
         UIImageView.image = images[imageIndex]
     }
     
+    
+    
     //再生と停止ボタン
     @IBAction func startStop(_ sender: Any) {
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
-        if self.timer != nil {
-            self.timer.invalidate()   // タイマーを停止する
-            self.timer = nil          // startTimer() の timer == nil で判断するために、 timer = nil としておく
-        }
     }
+    
+    // timeInterval: 0.2 意味は？
+    // target: self, 意味は？
+    // selector: #selector(onTimer(_:)), 意味は？
+    // userInfo: nil, 意味は？
+    // repeats: true リピートするよという意味っぽい
+    // self.timer.invalidate() で
+    
 
     
     //進むボタン
