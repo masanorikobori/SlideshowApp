@@ -52,6 +52,9 @@
                     </view>
                     <connections>
                         <outlet property="UIImageView" destination="e2D-mq-Szh" id="wSL-Ft-11H"/>
+                        <outlet property="backImageOutlet" destination="cUF-BV-ttx" id="iTv-jF-VMv"/>
+                        <outlet property="nextImageOutlet" destination="xuZ-Ub-IZi" id="iTs-4c-dvS"/>
+                        <outlet property="startStopOutlet" destination="gqT-gL-TbA" id="2ve-cW-rCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

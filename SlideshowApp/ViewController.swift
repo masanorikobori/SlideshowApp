@@ -14,7 +14,7 @@ import UIKit
 // クラス。一番上の階層
 class ViewController: UIViewController {
     
-    //UIimageViewをアウトレットした！
+    //UIimageView(画像)をアウトレットした！
     @IBOutlet weak var UIImageView: UIImageView!
     
     
@@ -53,7 +53,8 @@ class ViewController: UIViewController {
 
     
     //戻るボタン
-    @IBAction func backImage(_ sender: Any) {
+    @IBOutlet weak var backImageOutlet: UIButton!   //戻るボタンのアウトレット
+    @IBAction func backImage(_ sender: Any) {   //戻るボタンのアクション
         if imageIndex == 0 {
             imageIndex = 2
         } else {
@@ -65,19 +66,21 @@ class ViewController: UIViewController {
     
     
     //再生と停止ボタン
-    @IBAction func startStop(_ sender: Any) {
+    
+    @IBOutlet weak var startStopOutlet: UIButton!   //再生・停止をアウトレット
+    @IBAction func startStop(_ sender: Any) {   //再生・停止のアクションボタン
         // 動作中のタイマーを1つに保つために、 timer が存在しない場合だけタイマーを生成して動作させる
         if self.timer == nil {         // タイマーを設定
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)      //Timer.scheduledTimerでタイマーを作成、始動していて、その後の()に入っている記述は引数
-            //nextImage.isEnabled = false   // 再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示にしたい！■■■エラーになる
-            //backImage.isEnabled = false   // 再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示にしたい！■■■エラーになる
-            //startStop.setTitle("停止", for: .normal)    // ボタンの名前を停止とする■■■エラーになる
+            nextImageOutlet.isEnabled = false   // 再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示にしたい！
+            backImageOutlet.isEnabled = false   // 再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示にしたい！
+            startStopOutlet.setTitle("停止", for: .normal)    // ボタンの名前を停止とする
         } else if self.timer != nil {
             self.timer.invalidate()     // タイマーを停止
             self.timer = nil    // nil にして再び再生(nil の時にタイマー生成)
-            //nextImage.isEnabled = true       // 再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示にしたい！■■■エラーになる
-            //backImage.isEnabled = true       // 再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示にしたい！■■■エラーになる
-            //startStop.setTitle("再生", for: .normal)        // ボタンの名前を再生とする■■■エラーになる
+            nextImageOutlet.isEnabled = true       // 再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示にしたい！
+            backImageOutlet.isEnabled = true       // 再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示にしたい！
+            startStopOutlet.setTitle("再生", for: .normal)        // ボタンの名前を再生とする
         }
     }
     // startTimer() の timer == nil で判断するために、 timer = nil としておく
@@ -92,7 +95,8 @@ class ViewController: UIViewController {
     
 
     //進むボタン
-    @IBAction func nextImage(_ sender: Any) {
+    @IBOutlet weak var nextImageOutlet: UIButton!   //進むボタンのアウトレット
+    @IBAction func nextImage(_ sender: Any) {   //進むボタンのアクション
         if imageIndex == 2 {
             imageIndex = 0
         } else {
