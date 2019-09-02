@@ -14,8 +14,9 @@ import UIKit
 // クラス。一番上の階層
 class ViewController: UIViewController {
     
-    //UIimageView(画像)をアウトレットした！
-    @IBOutlet weak var UIImageView: UIImageView!
+    
+    @IBOutlet weak var UIImageView: UIImageView!    //UIimageView(画像)をアウトレットした！
+    
     
     
     // プロパティ
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     // ↑これは配列！UIImage(named: 〜)というUIImageを作成するイニシャライザの外部引数名と引数指定値を区切るための記号
     
 
-    // これはメソッドになるの？？
+    // これはメソッド
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,10 +35,20 @@ class ViewController: UIViewController {
         //写真の呼び出しについての関数？
         func imageView() {
             let imageView = images[0]    // 表示している画像の番号から名前を取り出し
-            UIImageView.image = imageView // Image Viewに読み込んだ画像をセット
+            UIImageView.image = images[imageIndex] // Image Viewに読み込んだ画像をセット
         }
-        
     }
+    
+    // 遷移ページに画像を渡す
+    override func prepare(for segue): UlStoryboardSegue, sender: Any?) {
+    let resultVC = segue.destination as! ResultViewController
+    resultVC.image = images[imageIndex]
+    }
+    
+    
+    
+    
+    
     
     // 更新用関数(更新するために作った関数
     @objc func onTimer(_ timer: Timer) {
