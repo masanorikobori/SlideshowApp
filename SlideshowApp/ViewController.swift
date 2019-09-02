@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     var imageIndex = 0
     var timer: Timer!   //一定の間隔で処理を行うためのタイマー
     var timer_sec: Float = 0    // タイマー用の時間のための変数
-    let images = [UIImage(named: "01.jpg"), UIImage(named: "02.jpg"), UIImage(named: "03.jpg")]     //写真の配列？それとも辞書？
+    let images = [UIImage(named: "01.jpg"), UIImage(named: "02.jpg"), UIImage(named: "03.jpg")]
+    // ↑これは配列！UIImage(named: 〜)というUIImageを作成するイニシャライザの外部引数名と引数指定値を区切るための記号
     
 
     // これはメソッドになるの？？
