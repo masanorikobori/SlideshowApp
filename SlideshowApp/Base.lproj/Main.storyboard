@@ -81,7 +81,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="前のページへ戻る"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="dnV-iz-SmW"/>
+                                    <segue destination="be9-V5-fhT" kind="unwind" unwindAction="unwind:" id="6T7-DG-42J"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PUG-zv-ECO">
@@ -97,6 +97,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMh-YX-Wwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="be9-V5-fhT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="863.768115942029" y="137.94642857142856"/>
         </scene>

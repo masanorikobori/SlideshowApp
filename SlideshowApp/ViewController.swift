@@ -39,13 +39,12 @@ class ViewController: UIViewController {
         }
     }
     
+    
     // 遷移ページに画像を渡す
-    override func prepare(for segue): UlStoryboardSegue, sender: Any?) {
-    let resultVC = segue.destination as! ResultViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let resultVC = segue.destination as! ResultViewController   //segueから遷移先のResultViewControllerを取得する
     resultVC.image = images[imageIndex]
     }
-    
-    
     
     
     
@@ -117,6 +116,9 @@ class ViewController: UIViewController {
     }
     
     
+    //推移先の戻るボタンからここへ戻ってくる
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
 
 
 
