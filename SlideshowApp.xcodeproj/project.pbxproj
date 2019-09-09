@@ -12,10 +12,9 @@
 		B141DD5B2318FA6400EC2682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B141DD592318FA6400EC2682 /* Main.storyboard */; };
 		B141DD602318FA6500EC2682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B141DD5E2318FA6500EC2682 /* LaunchScreen.storyboard */; };
 		B141DD682318FE1000EC2682 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B141DD672318FE1000EC2682 /* ResultViewController.swift */; };
-		B141DD6A231910B400EC2682 /* contentsOfFile.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B141DD69231910B400EC2682 /* contentsOfFile.bundle */; };
-		B141DD762319144300EC2682 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B141DD732319144300EC2682 /* 02.jpg */; };
-		B141DD772319144300EC2682 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B141DD742319144300EC2682 /* 01.jpg */; };
-		B141DD782319144300EC2682 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B141DD752319144300EC2682 /* 03.jpg */; };
+		EA3F3DA1232673AA0021F2C2 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA3F3D9E232673A90021F2C2 /* 02.jpg */; };
+		EA3F3DA2232673AA0021F2C2 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA3F3D9F232673AA0021F2C2 /* 01.jpg */; };
+		EA3F3DA3232673AA0021F2C2 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA3F3DA0232673AA0021F2C2 /* 03.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +25,9 @@
 		B141DD5F2318FA6500EC2682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B141DD612318FA6500EC2682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B141DD672318FE1000EC2682 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		B141DD69231910B400EC2682 /* contentsOfFile.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = contentsOfFile.bundle; sourceTree = SOURCE_ROOT; };
-		B141DD732319144300EC2682 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 02.jpg; path = "素材の画像/02.jpg"; sourceTree = SOURCE_ROOT; };
-		B141DD742319144300EC2682 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 01.jpg; path = "素材の画像/01.jpg"; sourceTree = SOURCE_ROOT; };
-		B141DD752319144300EC2682 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 03.jpg; path = "素材の画像/03.jpg"; sourceTree = SOURCE_ROOT; };
+		EA3F3D9E232673A90021F2C2 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 02.jpg; path = ../../../02.jpg; sourceTree = "<group>"; };
+		EA3F3D9F232673AA0021F2C2 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 01.jpg; path = ../../../01.jpg; sourceTree = "<group>"; };
+		EA3F3DA0232673AA0021F2C2 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				B141DD552318FA6400EC2682 /* AppDelegate.swift */,
-				B141DD742319144300EC2682 /* 01.jpg */,
-				B141DD732319144300EC2682 /* 02.jpg */,
-				B141DD752319144300EC2682 /* 03.jpg */,
 				B141DD572318FA6400EC2682 /* ViewController.swift */,
-				B141DD69231910B400EC2682 /* contentsOfFile.bundle */,
+				EA3F3D9F232673AA0021F2C2 /* 01.jpg */,
+				EA3F3D9E232673A90021F2C2 /* 02.jpg */,
+				EA3F3DA0232673AA0021F2C2 /* 03.jpg */,
 				B141DD592318FA6400EC2682 /* Main.storyboard */,
 				B141DD5E2318FA6500EC2682 /* LaunchScreen.storyboard */,
 				B141DD612318FA6500EC2682 /* Info.plist */,
@@ -134,12 +131,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B141DD782319144300EC2682 /* 03.jpg in Resources */,
-				B141DD772319144300EC2682 /* 01.jpg in Resources */,
-				B141DD6A231910B400EC2682 /* contentsOfFile.bundle in Resources */,
+				EA3F3DA3232673AA0021F2C2 /* 03.jpg in Resources */,
 				B141DD602318FA6500EC2682 /* LaunchScreen.storyboard in Resources */,
+				EA3F3DA1232673AA0021F2C2 /* 02.jpg in Resources */,
+				EA3F3DA2232673AA0021F2C2 /* 01.jpg in Resources */,
 				B141DD5B2318FA6400EC2682 /* Main.storyboard in Resources */,
-				B141DD762319144300EC2682 /* 02.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
